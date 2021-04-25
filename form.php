@@ -33,6 +33,9 @@
 
     if (nothooson($_POST['nomer1']) && nothooson($_POST['uildel']) && nothooson($_POST['nomer2'])) {
         $hariu = calculate($_POST['nomer1'], $_POST['uildel'], $_POST['nomer2']);
+        if(nothooson($hariu)){
+            echo " hariug hevlesen";
+        }
     }
 
     ?>
