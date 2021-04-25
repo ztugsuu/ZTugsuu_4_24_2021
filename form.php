@@ -1,8 +1,6 @@
-<?php
-    echo "ZT soft";
-    ?>
-    <?php
 
+    <?php
+    include 'zt_logo.php';
     function nothooson($too)
     {
         if ($too != "") {
@@ -13,31 +11,28 @@
 
     function calculate($nom1, $uildel, $nom2)
     {
-        switch($uildel) {
+        switch ($uildel) {
             case "+":
                 return $nom1 + $nom2;
-            break;
+                break;
             case "-":
                 return $nom1 - $nom2;
-            break;
+                break;
             case "*":
                 return $nom1 * $nom2;
-            break;
+                break;
             case "/":
                 return $nom1 / $nom2;
-            break;
-    
+                break;
+
             default:
                 return 'Aldaa';
         }
         return 'Mash tom aldaa';
     }
 
-	if( nothooson($_POST['nomer1']) && nothooson($_POST['uildel']) && nothooson($_POST['nomer2']) ) {
-		$hariu = calculate($_POST['nomer1'], $_POST['uildel'], $_POST['nomer2']);
-		if(nothooson($hariu)) {
-            echo " hariu ilersen "; 
-		}
-	}
+    if (nothooson($_POST['nomer1']) && nothooson($_POST['uildel']) && nothooson($_POST['nomer2'])) {
+        $hariu = calculate($_POST['nomer1'], $_POST['uildel'], $_POST['nomer2']);
+    }
 
     ?>
